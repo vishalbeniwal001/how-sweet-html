@@ -1,16 +1,19 @@
+/* Importing custom fonts */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
 
+/* common body styles */
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(to right, #66cc99, #ff9999);
     color: #333;
+    height: 100vh;
 }
 
+/* Header styles */
 header {
-    /* background: pink; */
     margin-top: 10px;
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -20,6 +23,7 @@ header {
     margin-bottom: 30px;
 }
 
+/* styles for the heading (PULSE) */
 #heading {
     background: white;
     -webkit-background-clip: text;
@@ -39,7 +43,8 @@ header {
     width: 16rem;
     transition: transform 800ms linear;
 }
-.pulse:hover{
+
+.pulse:hover {
     transform: scale(1.3) rotate(45deg);
 }
 
@@ -50,8 +55,13 @@ header {
     overflow: hidden;
 }
 
+/* Main content styles */
 .article {
     display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .container {
@@ -67,7 +77,6 @@ header {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    width: 22rem;
     padding: 2rem;
     margin: auto;
 
@@ -82,6 +91,7 @@ header {
     transform: scale(0.8);
 }
 
+/* sliding animated box with content */
 *,
 *::before,
 *::after {
@@ -133,7 +143,7 @@ header {
     }
 }
 
-
+/* background small image boxes */
 .bg-ele {
     background: rgba(255, 255, 255, 0.3) no-repeat center center;
     filter: opacity(0.2);
@@ -178,6 +188,7 @@ header {
     display: none;
 }
 
+/* footer styles */
 footer {
     margin-top: 10rem;
     border-top: 1px solid rgba(0, 0, 0, 0.327);
@@ -189,11 +200,10 @@ footer {
 
 footer img {
     width: 10rem;
-    padding: 20px;
+    padding: 17px;
 }
 
 #footer-info {
-    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -202,6 +212,17 @@ footer img {
     padding: 20px;
     width: 22rem;
 }
+
+@media only screen and (max-width: 322px) {
+    #footer-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    #company-info {
+        width: 17rem;
+    }
+}
+
 
 #company-info div {
     font-family: 'Bungee Spice', sans-serif;
@@ -216,10 +237,11 @@ footer img {
     padding: 20px;
 }
 
-#contact input{
+#contact input {
     padding: 5px 10px 5px 10px;
     border-radius: 10px;
     border: 1px solid white;
+    width: 10em;
 }
 
 #contact div {
@@ -230,8 +252,8 @@ footer img {
 
 #submit-btn {
     margin-top: 20px;
-    margin-left: 30%;
     padding: 4px 10px 4px 10px;
+    max-width: 8em;
 
     display: inline-block;
     font-size: 16px;
@@ -251,6 +273,7 @@ footer img {
     color: #1b5882;
 }
 
+/* resoponsive media queries */
 @media only screen and (min-width: 780px) {
     footer {
         flex-direction: row;
